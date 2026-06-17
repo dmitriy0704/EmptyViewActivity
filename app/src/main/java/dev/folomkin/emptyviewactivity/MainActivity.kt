@@ -2,6 +2,7 @@ package dev.folomkin.emptyviewactivity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
@@ -63,5 +64,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(intent)
         }
 
+        Log.d("happy", "onCreate")
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("happy", "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("happy", "onStop")
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("happy", "onStart")
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("happy", "onResume")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("happy", "onDestroy")
     }
 }
